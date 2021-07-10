@@ -1,0 +1,20 @@
+h1 {
+    font-size: xxx-large;
+    color: white;
+    text-align: center;
+}
+
+.first {
+    background-image: url("../../assets/images/field.jpg");
+}
+
+.section {
+    width: 100%;
+}
+
+.setion fp-tableCell {
+    display: flex;
+    flex-direction: column;
+    place-content: stretch center;
+    align-items: stretch;
+}
