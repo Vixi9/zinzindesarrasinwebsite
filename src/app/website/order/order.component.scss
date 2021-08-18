@@ -1,0 +1,55 @@
+table {
+    width: 50%;
+}
+
+.header {
+    text-align: center;
+    height: 200px;
+}
+
+.body {
+    text-align: center;
+    font-size: large;
+    min-height: calc(100vh - 510px);
+}
+
+#title {
+    font-family: Explorer;
+    font-size: 50px;
+    color: #5e5c5d;
+}
+
+.mat-column-ville, .mat-column-site, .mat-column-jours {
+    text-align: left;
+}
+
+.mat-column-heures {
+    text-align: right;
+}
+
+@media(max-width: 959px) {
+    .header {
+        max-height: 100px;
+    }
+
+    table {
+        width: 100%;
+    }
+    
+    #title {
+        font-family: Explorer;
+        font-size: large;
+        color: #5e5c5d;
+    }
+
+    .body {
+        padding: 10px;
+        text-align: center;
+        font-size: medium;
+        min-height: calc(100vh - 200px);
+    }
+
+    .mat-column-ville, .mat-column-site, .mat-column-jours, .mat-column-heures {
+        font-size: x-small;
+    }
+}

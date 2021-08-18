@@ -1,25 +1,31 @@
-<mat-toolbar color="primary">
-    <div fxHide.gt-sm>
+<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-around center">
+    <div style="width: 100%;" fxLayout="row" fxLayoutAlign="space-between center" fxHide.gt-sm>
         <button mat-icon-button (click)="onToggleSidenav()">
-            <mat-icon class="white">menu</mat-icon>
+            <mat-icon class="grey">menu</mat-icon>
         </button>
+        <a href="" routerLink="/accueil"><img id="logo" src="../../../../assets/img/logo.png" alt=""></a>
     </div>
-    <div>
-        <a routerLink="/accueil">Accueil</a>
-    </div>
-    <div fxFlex fxLayout fxLayoutAlign="end" fxHide.lt-sm>
+    <div fxFlex="50" fxHide.lt-sm>
         <mat-list fxLayout class="navigation-items">
             <mat-list-item>
-                <a routerLink="/decouvrir">Qui sommes nous</a>
+                <a href="" routerLink="/accueil"><img id="logo" src="../../../../assets/img/logo.png" alt=""></a>
             </mat-list-item>
             <mat-list-item>
-                <a routerLink="/acutalites">Actualités</a>
+                <a mat-button [matMenuTriggerFor]="menuDecouverte">Nos galettes</a>
+            </mat-list-item>
+            <mat-menu #menuDecouverte>
+                <a mat-menu-item href="/ferme">Notre ferme</a>
+                <a mat-menu-item href="/atouts">Les atouts du sarrasin</a>
+                <a mat-menu-item href="/pourquoi">Pourquoi du sarrasin ?</a>
+            </mat-menu>
+            <mat-list-item>
+                <a mat-button href="" routerLink="/commander">Commander</a>
             </mat-list-item>
             <mat-list-item>
-                <a routerLink="/boutique">Boutique</a>
+                <a mat-button href="" routerLink="/actualites">Actualités</a>
             </mat-list-item>
             <mat-list-item>
-                <a routerLink="/contact">Contact</a>
+                <a mat-button href="" routerLink="/contact">Contact</a>
             </mat-list-item>
         </mat-list>
     </div>

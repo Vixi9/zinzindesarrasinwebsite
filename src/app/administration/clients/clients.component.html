@@ -1,0 +1,10 @@
+<h1>Clients</h1>
+<mat-list>
+    <p>{{ clients }}</p>
+    <mat-list-item *ngFor="let client of clients">
+        <span>{{ client.idClient }}</span>
+        <span>{{ client.prenomClient }}</span>
+        <span>{{ client.nomClient }}</span>
+        <span>{{ client.emailClient }}</span>
+    </mat-list-item>
+</mat-list>

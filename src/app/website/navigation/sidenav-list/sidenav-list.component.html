@@ -1,26 +1,34 @@
 <mat-nav-list>
-    <a mat-list-item routerLink="/home" (click)="onSidenavClose()">
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLink="/accueil" (click)="onSidenavClose()">
         <mat-icon>home</mat-icon>
         <span class="nav-caption">Accueil</span>
     </a>
-    <a mat-list-item routerLink="/discover" (click)="onSidenavClose()">
-        <mat-icon>info</mat-icon>
-        <span class="nav-caption">Qui sommes nous ?</span>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLink="/ferme" (click)="onSidenavClose()">
+        <mat-icon>gite</mat-icon>
+        <span class="nav-caption">Notre ferme</span>
     </a>
-    <a mat-list-item routerLink="/news" (click)="onSidenavClose()">
+    <a mat-list-item routerLink="/atouts" (click)="onSidenavClose()">
+        <mat-icon>gite</mat-icon>
+        <span class="nav-caption">Les atouts du sarrasin</span>
+    </a>
+    <a mat-list-item routerLink="/pourquoi" (click)="onSidenavClose()">
+        <mat-icon>gite</mat-icon>
+        <span class="nav-caption">Pourquoi du sarrasin ?</span>
+    </a>
+    <mat-divider></mat-divider>
+    <a mat-list-item routerLink="/commander" (click)="onSidenavClose()">
+        <mat-icon>shopping_cart</mat-icon>
+        <span class="nav-caption">Commander</span>
+    </a>
+    <a mat-list-item routerLink="/actualites" (click)="onSidenavClose()">
         <mat-icon>article</mat-icon>
         <span class="nav-caption">Actualités</span>
-    </a>
-    <a mat-list-item routerLink="/shop" (click)="onSidenavClose()">
-        <mat-icon>shopping_cart</mat-icon>
-        <span class="nav-caption">Boutique</span>   
     </a>
     <a mat-list-item routerLink="/contact" (click)="onSidenavClose()">
         <mat-icon>contact_support</mat-icon>
         <span class="nav-caption">Contact</span>   
     </a>
-    <a mat-list-item routerLink="/account" (click)="onSidenavClose()">
-        <mat-icon>account_circle</mat-icon>
-        <span class="nav-caption">Compte</span>
-    </a>
+    <mat-divider></mat-divider>
 </mat-nav-list>

@@ -1,0 +1,75 @@
+h1 {
+    font-family: Explorer;
+    font-size: xx-large;
+    color: #5e5c5d;
+}
+
+.break {
+    text-align: center;
+    min-height: calc(50vh - 100px);
+}
+
+.first {
+    min-height: calc(100vh - 100px);
+}
+
+.last {
+    min-height: calc(100vh - 310px);
+}
+
+.parallax {
+    min-height: calc(100vh - 100px);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#champ {
+    background-image: url("../../../assets/img/champ.jpg");
+}
+
+#fleur {
+    background-image: url("../../../assets/img/fleur.jpg");
+}
+
+#logo {
+    width: 30%;
+    height: 30%;
+}
+
+#title {
+    font-size: 50px;
+}
+
+@media(max-width: 959px) {
+    h1 {
+        font-size: large;
+    }
+
+    .parallax {
+        min-height: 50vh;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .first {
+        min-height: calc(100vh - 100px);
+    }
+
+    .last {
+        min-height: calc(100vh - 506px)
+    }
+
+    #title {
+        font-size: xx-large;
+    }
+
+    #logo {
+        width: 85%;
+    }
+}

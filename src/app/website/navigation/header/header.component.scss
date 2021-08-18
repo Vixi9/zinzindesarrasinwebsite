@@ -1,10 +1,15 @@
-a {
-    text-decoration: none;
-    color: white;
+mat-toolbar {
+    height: 100px;
+    justify-content: space-around;
 }
 
-a:hover, a:active{
-    color: lightgray;
+:host ::ng-deep .mat-list-base .mat-list-item .mat-list-item-content {
+    justify-content: center;
+}
+
+a, .grey {
+    text-decoration: none;
+    color: #444444;
 }
 
 .navigation-items{
@@ -13,16 +18,12 @@ a:hover, a:active{
     margin: 0;
 }
 
-.white {
-    color: white;
-}
-
-@media(max-width: 959px){
+@media(max-width: 959px) {
     mat-toolbar{
         border-radius: 0px;
     }
 }
 
 #logo {
-    position: relative;
+    height: 90px;
 }
