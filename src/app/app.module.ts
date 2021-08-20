@@ -20,7 +20,8 @@ import { WebsiteModule } from './website/website.module';
     MaterialModule,
     FlexLayoutModule,
     HttpClientModule,
-    WebsiteModule
+    WebsiteModule,
+    BrowserAnimationsModule
   ],
   bootstrap: [
     AppComponent

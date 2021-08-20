@@ -19,6 +19,7 @@ import { FermeComponent } from './ferme/ferme.component';
 import { AtoutsComponent } from './atouts/atouts.component';
 import { PourquoiComponent } from './pourquoi/pourquoi.component';
 import { GoogleMapsModule } from '@angular/google-maps';
+import { FacebookModule } from 'ngx-facebook';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { GoogleMapsModule } from '@angular/google-maps';
     MatFormFieldModule,
     MatTableModule,
     MatMenuModule,
-    GoogleMapsModule
+    GoogleMapsModule,
+    FacebookModule,
   ],
   exports: [
     FooterComponent,

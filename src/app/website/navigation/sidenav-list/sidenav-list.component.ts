@@ -1,16 +1,63 @@
 import { Component, OnInit, EventEmitter, Output } from '@angular/core';
+import { animation, style, animate, trigger, transition, state } from '@angular/animations';
 
 @Component({
   selector: 'app-sidenav-list',
   templateUrl: './sidenav-list.component.html',
-  styleUrls: ['./sidenav-list.component.scss']
+  styleUrls: ['./sidenav-list.component.scss'],
+  animations: [
+    trigger('openClose', [
+      state('open', style({
+        visibility: 'visible',
+        opacity: 100,
+        'max-height': '200px'
+      })),
+      state('closed', style({
+        visibility: 'hidden',
+        opacity: 0,
+        'max-height': '0px'
+      })),
+      transition('closed <=> open', [
+        animate('200ms')
+      ])
+    ]),
+    
+    trigger('expandIconRotate', [
+      state('open', style({
+        transform: 'rotate(90deg)'
+      })),
+      state('closed', style({
+        transform: 'none'
+      })),
+      transition('closed <=> open', [
+        animate('200ms')
+      ])
+    ])
+  ]
 })
 export class SidenavListComponent implements OnInit {
 
   @Output() sidenavClose = new EventEmitter();
+
+  productMenu: boolean = false;
+  newsMenu: boolean = false;
+  discoveryMenu: boolean = false;
+  
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleProductMenu() {
+    this.productMenu = !this.productMenu;
+  }
+
+  toggleNewsMenu() {
+    this.newsMenu = !this.newsMenu;
+  }
+
+  toggleDiscoveryMenu() {
+    this.discoveryMenu = !this.discoveryMenu;
   }
 
   public onSidenavClose = () => {
