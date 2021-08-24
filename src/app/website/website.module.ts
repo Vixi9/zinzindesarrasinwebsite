@@ -4,8 +4,7 @@ import { HeaderComponent } from './navigation/header/header.component';
 import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
 import { HomeComponent } from './home/home.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
-import { NewsComponent } from './news/news.component';
-import { ShopComponent } from './shop/shop.component';
+
 import { MaterialModule } from '../material/material.module';
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './contact/contact.component';
@@ -13,28 +12,31 @@ import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
-import { OrderComponent } from './order/order.component';
+import { CommanderComponent } from './commander/commander.component';
 import { MatMenuModule } from '@angular/material/menu';
 import { FermeComponent } from './ferme/ferme.component';
 import { AtoutsComponent } from './atouts/atouts.component';
 import { PourquoiComponent } from './pourquoi/pourquoi.component';
-import { GoogleMapsModule } from '@angular/google-maps';
 import { FacebookModule } from 'ngx-facebook';
-
+import { ProduitComponent } from './produit/produit.component';
+import { RecettesComponent } from './recettes/recettes.component';
+import { GoogleMapsModule } from '@angular/google-maps';
+import { ArticlesComponent } from './articles/articles.component';
 
 @NgModule({
   declarations: [
     HeaderComponent,
     SidenavListComponent,
     HomeComponent,
-    NewsComponent,
-    ShopComponent,
     ContactComponent,
     FooterComponent,
-    OrderComponent,
+    CommanderComponent,
     FermeComponent,
     AtoutsComponent,
-    PourquoiComponent
+    PourquoiComponent,
+    ProduitComponent,
+    RecettesComponent,
+    ArticlesComponent
   ],
   imports: [
     CommonModule,
@@ -46,14 +48,13 @@ import { FacebookModule } from 'ngx-facebook';
     MatTableModule,
     MatMenuModule,
     GoogleMapsModule,
-    FacebookModule,
+    FacebookModule
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     SidenavListComponent,
     HomeComponent,
-    NewsComponent
   ]
 })
 export class WebsiteModule { }

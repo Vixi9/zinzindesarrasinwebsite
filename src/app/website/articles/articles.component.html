@@ -1,0 +1,13 @@
+<div class="header" fxLayout="column" fxLayoutAlign="center none">
+    <h1 id="title">Articles de presse</h1>
+</div>
+<div class="wrapper" fxLayout="row" fxLayoutAlign="center none">
+    <div class="content" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="30px">
+        <mat-card *ngFor="let article of articles">
+            <mat-card-header>
+                <mat-card-title>Article du {{article.journal}}</mat-card-title>
+            </mat-card-header>
+            <img mat-card-image src="{{article.path}}" alt="">
+        </mat-card>
+    </div>
+</div>

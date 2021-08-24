@@ -78,13 +78,29 @@ $zinzindusarrasin-theme: mat.define-light-theme((
     src: url("assets/fonts/ExplorerFree-Regular.otf") format("opentype");
 }
 
+@font-face {
+    font-family: Boris;
+    src: url("assets/fonts/Boris.otf") format("opentype");
+}
+
+@font-face {
+    font-family: Bosch;
+    src: url("assets/fonts/Bosch-Personal-Use.otf") format("opentype");
+}
+
 body {
     margin: 0;
 }
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html, body {
+    height: 100%;
+}
 
+body {
+    margin: 0; 
+    font-family: Roboto, 
+    "Helvetica Neue", sans-serif;
+}
 
 .mat-list-item-content > .nav-caption {
     margin-left: 10px;

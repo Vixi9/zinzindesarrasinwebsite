@@ -1,1 +1,46 @@
-<p>contact works!</p>
+<div class="header" fxLayout="column" fxLayoutAlign="center center">
+    <h1 id="title">Formulaire de contact</h1>
+</div>
+<div class="wrapper" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutAlign.lt-md="start none" fxLayoutGap="50px">
+    <div id="map-div" *ngIf="apiLoaded | async">
+        <google-map [options]="options" width="100%">
+            <map-marker *ngFor="let markerPosition of markerPositions" [position]="markerPosition" [options]="markerOptions"></map-marker>
+        </google-map>
+    </div>
+    <div id="form-div" fxFlex="50" fxLayout="row" fxLayout.lt-md="column" fxLayoutAlign.gt-md="space-around start" fxLayoutGap="50px">
+        <form fxFlex.gt-md="70" id="contact-form" fxLayout="column" fxLayoutAlign="space-evenly stretch">
+            <div fxLayout="row" fxLayout.lt-md="column" fxLayoutGap="10px">
+                <mat-form-field fxFlex="50" appearance="outline" color="accent">
+                    <mat-label>Nom</mat-label>
+                    <input matInput>
+                </mat-form-field>
+                <mat-form-field fxFlex="50" appearance="outline" color="accent">
+                    <mat-label>Prénom</mat-label>
+                    <input matInput>
+                </mat-form-field>
+            </div>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Objet</mat-label>
+                <input matInput>
+            </mat-form-field>
+            <mat-form-field appearance="outline" color="accent">
+                <mat-label>Message</mat-label>
+                <textarea id="message-input" matInput rows="10" maxlength="1100"></textarea>
+            </mat-form-field>
+            <div id="form-controls" fxLayout="row" fxLayoutAlign="end end">
+                <button mat-stroked-button color="accent">Envoyer</button>
+            </div>
+        </form>
+        <mat-list id="coordonnees" fxFlex.gt-md="30" fxLayout="column" fxLayoutAlign="start">
+            <a mat-list-item>Patrick Brionne</a>
+            <a mat-list-item>Le Cerisier</a>
+            <a mat-list-item>61700 Champsecret</a>
+            <a mat-list-item href="mailto:zinzindesarrasin@gmail.com">zinzindesarrasin@gmail.com</a>
+            <a mat-list-item>06 82 92 28 38</a>
+        </mat-list>
+    </div>
+</div>

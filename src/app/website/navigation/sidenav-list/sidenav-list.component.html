@@ -9,7 +9,8 @@
         <span class="nav-caption">Nos galettes</span>
     </mat-list-item>
     <div [@openClose]="productMenu ? 'open' : 'closed'">
-        <a mat-list-item (click)="onSidenavClose()">
+        <a mat-list-item routerLink="/produit" (click)="onSidenavClose()">
+            <img src="../../../../assets/img/galette.svg" width="24px" height="24px">
             <span class="nav-caption">Le produit</span>
         </a>
         <a mat-list-item routerLink="/commander" (click)="onSidenavClose()">
@@ -31,11 +32,11 @@
         <span class="nav-caption">Actualités</span>
     </mat-list-item>
     <div [@openClose]="newsMenu ? 'open' : 'closed'">
-        <a mat-list-item routerLink="/news" (click)="onSidenavClose()">
+        <a mat-list-item href="https://www.facebook.com/Zinzin-de-Sarrasin-105029095228697" (click)="onSidenavClose()">
             <img src="../../../../assets/img/facebook.svg" width="24px" height="24px" alt="facebook">
-            <span class="nav-caption">L'actualité en images</span>
+            <span class="nav-caption">En images</span>
         </a>
-        <a mat-list-item routerLink="/news" (click)="onSidenavClose()">
+        <a mat-list-item routerLink="/articles" (click)="onSidenavClose()">
             <mat-icon>description</mat-icon>
             <span class="nav-caption">Articles de presse</span>
         </a>
@@ -51,6 +52,7 @@
             <span class="nav-caption">Notre ferme</span>
         </a>
         <a mat-list-item routerLink="/pourquoi" (click)="onSidenavClose()">
+            <img src="../../../../assets/img/barley.svg" width="24px" height="24px">
             <span class="nav-caption">Le sarrasin en Normandie</span>
         </a>
     </div>

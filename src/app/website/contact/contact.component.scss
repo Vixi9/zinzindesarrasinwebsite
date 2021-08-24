@@ -1,0 +1,34 @@
+#map-div {
+    min-height: 500px;
+    width: 50%;
+}
+
+#form-div {
+    width: 50%;
+}
+
+#message-input {
+    resize: none;
+}
+
+#coordonnees > a {
+    font-size: small;
+    text-decoration: none;
+    color: #444444;
+    transition: color ease-in 200ms;
+}
+
+#coordonnees > a:hover {
+    color: #777777;
+    transition: color ease-in 200ms;
+}
+
+@media(max-width: 959px) {
+    #map-div {
+        width: 100%;
+    }
+
+    #form-div {
+        width: 100%;
+    }
+}

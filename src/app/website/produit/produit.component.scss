@@ -1,0 +1,41 @@
+table {
+    width: 50%;
+}
+
+.header {
+    text-align: center;
+    height: 200px;
+    background-color: #f0f0f0;
+}
+
+.body {
+    text-align: center;
+    font-size: large;
+    min-height: calc(100vh - 510px);
+}
+
+#title {
+    font-family: Explorer;
+    font-size: 50px;
+    color: #5e5c5d;
+}
+
+.mat-column-ville, .mat-column-site, .mat-column-jours {
+    text-align: left;
+}
+
+.mat-column-heures {
+    text-align: right;
+}
+
+a {
+    line-height: 32px;
+    color: #666666;
+    transition: color ease-in 200ms;
+    text-decoration: none;
+}
+
+a:hover {
+    transition: color ease-in 200ms;
+    color: #CCCCCC;
+}

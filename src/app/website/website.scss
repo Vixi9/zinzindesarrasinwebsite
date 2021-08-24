@@ -1,0 +1,167 @@
+h1 {
+    font-family: Explorer;
+    font-size: xx-large;
+    color: #5e5c5d;
+}
+
+h2 {
+    font-family: Explorer;
+    font-size: x-large;
+    color: #5e5c5d;
+}
+
+.header {
+    text-align: center;
+    height: 200px;
+    background-color: #f0f0f0;
+}
+
+.wrapper {
+    font-size: large;
+    padding: 10px;
+    min-height: calc(100vh - 275px);
+}
+
+.content {
+    width: 50%;
+    text-align: justify;
+}
+
+#title {
+    font-family: Explorer;
+    font-size: 50px;
+    color: #5e5c5d;
+}
+
+.section {
+    position: relative;
+    text-align: center;
+    min-height: calc(50vh - 75px);
+    perspective: 10px;
+}
+
+.up-button {
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.down-button {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.first {
+    min-height: calc(100vh - 75px);
+}
+
+.last {
+    min-height: calc(100vh - 317px);
+}
+
+.parallax {
+    min-height: calc(100vh - 75px);
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+mat-card-content {
+    font-size: large;
+    text-align: justify;
+}
+
+#champ {
+    background-image: url("../../assets/img/champ.jpg");
+}
+
+#fleur {
+    background-image: url("../../assets/img/fleur.jpg");
+}
+
+#logo {
+    width: 30%;
+    height: 30%;
+}
+
+#ferme {
+    background-image: url("../../assets/img/ferme.jpg");
+}
+
+#ferme-avant {
+    background-image: url("../../assets/img/ferme-avant.jpg");
+}
+
+#logo {
+    width: 30%;
+    height: 30%;
+}
+
+#title {
+    font-size: 50px;
+}
+
+@media(max-width: 959px) {
+    h1 {
+        font-size: large;
+    }
+
+    .header {
+        max-height: 100px;
+    }
+
+    #title {
+        font-family: Explorer;
+        font-size: large;
+        color: #5e5c5d;
+        line-height: 0px;
+    }
+
+    .wrapper {
+        text-align: center;
+        font-size: medium;
+        min-height: calc(100vh - 175px);
+    }
+
+    .content {
+        width: 100%;
+    }
+
+    .parallax {
+        min-height: 50vh;
+
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .first {
+        min-height: calc(100vh - 75px);
+    }
+
+    .last {
+        min-height: calc(100vh - 75px)
+    }
+
+    mat-card-content {
+        font-size: medium;
+    }
+
+    .mat-card-title {
+        font-size: large;
+    }
+
+    #title {
+        font-size: large;
+    }
+
+    #logo {
+        width: 85%;
+    }
+}
