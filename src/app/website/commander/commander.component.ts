@@ -1,7 +1,8 @@
 import { HttpClient } from '@angular/common/http';
-import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild, ElementRef, AfterContentInit } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import apikey from "../../../../apikey.json";
 
 @Component({
   selector: 'app-commander',
@@ -36,9 +37,9 @@ export class CommanderComponent implements OnInit {
   ];
 
   apiLoaded: Observable<boolean>;
-
+  
   constructor(httpClient: HttpClient) {
-    this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=AIzaSyB_tqZYJwga3bFNdvoZ-k1b4wLm8O05zuA', 'callback')
+    this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=' + apikey.googleMaps, 'callback')
         .pipe(
           map(() => true),
           catchError(() => of(false)),
@@ -49,7 +50,7 @@ export class CommanderComponent implements OnInit {
   }
 
   setMapTarget(query: string) {
-    this.map.nativeElement.setAttribute('src', 'https://www.google.com/maps/embed/v1/place?key=AIzaSyB_tqZYJwga3bFNdvoZ-k1b4wLm8O05zuA&q='.concat(query));
+    this.map.nativeElement.setAttribute('src', 'https://www.google.com/maps/embed/v1/place?key=' + apikey.googleMaps + '&q=' + query);
   }
 
 }

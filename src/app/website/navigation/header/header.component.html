@@ -46,11 +46,11 @@
                 <a mat-button [matMenuTriggerFor]="menuDecouverte">Qui sommes nous</a>
             </mat-list-item>
             <mat-menu #menuDecouverte>
-                <a mat-menu-item href="/ferme">Notre ferme</a>
-                <a mat-menu-item href="/pourquoi">Le sarrasin en Normandie</a>
+                <a mat-menu-item routerLink="/ferme">Notre ferme</a>
+                <a mat-menu-item routerLink="/pourquoi">Le sarrasin en Normandie</a>
             </mat-menu>
             <mat-list-item>
-                <a mat-button href="" routerLink="/contact">Contact</a>
+                <a mat-button routerLink="/contact">Contact</a>
             </mat-list-item>
         </mat-list>
     </div>

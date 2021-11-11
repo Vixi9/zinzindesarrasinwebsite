@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, of } from 'rxjs';
 import { catchError, map } from 'rxjs/operators';
+import apikey from "../../../../apikey.json";
 
 @Component({
   selector: 'app-contact',
@@ -24,7 +25,7 @@ export class ContactComponent implements OnInit {
   apiLoaded: Observable<boolean>;
 
   constructor(httpClient: HttpClient) {
-    this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=AIzaSyB_tqZYJwga3bFNdvoZ-k1b4wLm8O05zuA', 'callback')
+    this.apiLoaded = httpClient.jsonp('https://maps.googleapis.com/maps/api/js?key=' + apikey.googleMaps, 'callback')
         .pipe(
           map(() => true),
           catchError(() => of(false)),
