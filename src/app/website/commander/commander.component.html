@@ -1,47 +1,34 @@
 <div class="header" fxLayout="column" fxLayoutAlign="center stretch">
-    <h1 id="title">Comment acheter nos galettes ?</h1>
+  <h1 id="title">Comment acheter nos galettes ?</h1>
 </div>
 <div class="wrapper" fxLayout="row" fxLayoutAlign="center none">
-    <div class="content" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="30px">
-        <div fxLayout="column" fxLayoutAlign="center stretch">
-            <p>Nos galettes sont disponibles sur commande via notre adresse mail : <a href="mailto:zinzindesarrasin@gmail.com">zinzindesarrasin@gmail.com</a></p>
-            <p>Les commandes peuvent être récupérées sur les sites et aux horaires suivants :</p>
-        </div>
-        <div fxLayout="column" fxLayoutAlign="center none" fxLayoutGap="50px">
-            <table mat-table [dataSource]="lieux">
-                <ng-container matColumnDef="ville">
-                    <th mat-header-cell *matHeaderCellDef> Ville </th>
-                    <td mat-cell *matCellDef="let lieu">{{lieu.ville}}</td>
-                </ng-container>
-                <ng-container matColumnDef="site">
-                    <th mat-header-cell *matHeaderCellDef> Site </th>
-                    <td mat-cell *matCellDef="let lieu">{{lieu.site}}</td>
-                </ng-container>
-                <ng-container matColumnDef="jours">
-                    <th mat-header-cell *matHeaderCellDef> Jours </th>
-                    <td mat-cell *matCellDef="let lieu">{{lieu.jours}}</td>
-                </ng-container>
-                <ng-container matColumnDef="heures">
-                    <th mat-header-cell *matHeaderCellDef> Horaires </th>
-                    <td mat-cell *matCellDef="let lieu">{{lieu.heures}}</td>
-                </ng-container>
-                <ng-container matColumnDef="query">
-                    <th mat-header-cell *matHeaderCellDef></th>
-                    <td mat-cell *matCellDef="let lieu">
-                        <button class="map-target-button" mat-mini-fab color="warn" (click)="setMapTarget(lieu.query)"><mat-icon>location_on</mat-icon></button>
-                    </td>
-                </ng-container>
-                <tr mat-header-row *matHeaderRowDef="columnsToDisplay"></tr>
-                <tr mat-row *matRowDef="let row; columns: columnsToDisplay"></tr>
-            </table>
-            <div id="map-div" *ngIf="apiLoaded | async">
-                <iframe #map
-                    width="100%"
-                    height="100%"
-                    style="border:0"
-                    loading="lazy">
-                </iframe>
-            </div>
-        </div>
+  <div class="content" fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="30px">
+    <div fxLayout="column" fxLayoutAlign="center stretch">
+      <p>Nos galettes sont disponibles sur commande via notre adresse mail : <a
+        href="mailto:zinzindesarrasin@gmail.com">zinzindesarrasin@gmail.com</a></p>
+      <p>Les commandes peuvent être récupérées sur les sites et aux horaires suivants :</p>
     </div>
+    <div fxLayout="column" fxLayoutAlign="center none" fxLayoutGap="50px">
+      <table [dataSource]="lieux" aria-describedby="Lieux de vente" mat-table>
+        <ng-container matColumnDef="ville">
+          <th *matHeaderCellDef mat-header-cell> Ville</th>
+          <td *matCellDef="let lieu" mat-cell>{{lieu.ville}}</td>
+        </ng-container>
+        <ng-container matColumnDef="site">
+          <th *matHeaderCellDef mat-header-cell> Site</th>
+          <td *matCellDef="let lieu" mat-cell>{{lieu.site}}</td>
+        </ng-container>
+        <ng-container matColumnDef="jours">
+          <th *matHeaderCellDef mat-header-cell> Jours</th>
+          <td *matCellDef="let lieu" mat-cell>{{lieu.jours}}</td>
+        </ng-container>
+        <ng-container matColumnDef="heures">
+          <th *matHeaderCellDef mat-header-cell> Horaires</th>
+          <td *matCellDef="let lieu" mat-cell>{{lieu.heures}}</td>
+        </ng-container>
+        <tr *matHeaderRowDef="columnsToDisplay" mat-header-row></tr>
+        <tr *matRowDef="let row; columns: columnsToDisplay" mat-row></tr>
+      </table>
+    </div>
+  </div>
 </div>

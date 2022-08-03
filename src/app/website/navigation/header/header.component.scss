@@ -20,22 +20,22 @@ a, .grey {
 
 @media(max-width: 959px) {
     mat-toolbar{
-        border-radius: 0px;
+        border-radius: 0;
     }
 }
 
-#logo span:first-child {
-    font-family: Explorer;
+#logo-desktop span:first-child, #logo-mobile span:first-child {
+    font-family: Explorer, sans-serif;
     color: #5e5c5d;
     margin-bottom: 5px;
 }
 
-#logo span:last-child {
+#logo-desktop span:last-child, #logo-mobile span:last-child {
     color: #d6ae0b;
 }
 
-#logo span {
-    font-family: Boris;
+#logo-desktop span, #logo-mobile span {
+  font-family: Boris, cursive;
     height: 15px;
     font-size: large;
     line-height: 15px;

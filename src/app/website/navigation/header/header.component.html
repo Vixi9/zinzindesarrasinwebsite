@@ -4,8 +4,8 @@
             <mat-icon class="grey">menu</mat-icon>
         </button>
         <a routerLink="/accueil">
-            <button id="title" mat-button>
-                <div id="logo" fxLayout="column" fxLayoutAlign="center">
+            <button id="title-mobile" mat-button>
+                <div id="logo-mobile" fxLayout="column" fxLayoutAlign="center">
                     <span>Zinzin</span>
                     <span>de</span>
                     <span>Sarrasin</span>
@@ -17,8 +17,8 @@
         <mat-list fxLayout class="navigation-items">
             <mat-list-item>
                 <a routerLink="/accueil">
-                    <button id="title" mat-button>
-                        <div id="logo" fxLayout="column" fxLayoutAlign="center">
+                    <button id="title-desktop" mat-button>
+                        <div id="logo-desktop" fxLayout="column" fxLayoutAlign="center">
                             <span>Zinzin</span>
                             <span>de</span>
                             <span>Sarrasin</span>
@@ -33,14 +33,6 @@
                 <a mat-menu-item routerLink="/produit">Le produit</a>
                 <a mat-menu-item routerLink="/commander">Commander</a>
                 <a mat-menu-item routerLink="/atouts">Les atouts du sarrasin</a>
-                <a mat-menu-item disabled routerLink="/recettes">Recettes</a>
-            </mat-menu>
-            <mat-list-item>
-                <a mat-button [matMenuTriggerFor]="menuActualites">Actualités</a>
-            </mat-list-item>
-            <mat-menu #menuActualites>
-                <a mat-menu-item href="https://www.facebook.com/Zinzin-de-Sarrasin-105029095228697">En images</a>
-                <a mat-menu-item routerLink="/articles">Articles de presse</a>
             </mat-menu>
             <mat-list-item>
                 <a mat-button [matMenuTriggerFor]="menuDecouverte">Qui sommes nous</a>

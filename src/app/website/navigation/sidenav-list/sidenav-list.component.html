@@ -1,64 +1,45 @@
 <mat-nav-list>
-    <a mat-list-item routerLink="/accueil" (click)="onSidenavClose()">
-        <mat-icon>home</mat-icon>
-        <span class="nav-caption">Accueil</span>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/accueil">
+    <mat-icon>home</mat-icon>
+    <span class="nav-caption">Accueil</span>
+  </a>
+  <mat-divider></mat-divider>
+  <mat-list-item (click)="toggleProductMenu()">
+    <mat-icon [@expandIconRotate]="productMenu ? 'open' : 'closed'">navigate_next</mat-icon>
+    <span class="nav-caption">Nos galettes</span>
+  </mat-list-item>
+  <div [@openClose]="productMenu ? 'open' : 'closed'">
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/produit">
+      <img alt="" height="24px" src="../../../../assets/img/galette.svg" width="24px">
+      <span class="nav-caption">Le produit</span>
     </a>
-    <mat-divider></mat-divider>
-    <mat-list-item (click)="toggleProductMenu()">
-        <mat-icon [@expandIconRotate]="productMenu ? 'open' : 'closed'">navigate_next</mat-icon>
-        <span class="nav-caption">Nos galettes</span>
-    </mat-list-item>
-    <div [@openClose]="productMenu ? 'open' : 'closed'">
-        <a mat-list-item routerLink="/produit" (click)="onSidenavClose()">
-            <img src="../../../../assets/img/galette.svg" width="24px" height="24px">
-            <span class="nav-caption">Le produit</span>
-        </a>
-        <a mat-list-item routerLink="/commander" (click)="onSidenavClose()">
-            <mat-icon>shopping_cart</mat-icon>
-            <span class="nav-caption">Commander</span>
-        </a>
-        <a mat-list-item routerLink="/atouts" (click)="onSidenavClose()">
-            <mat-icon>add_circle_outline</mat-icon>
-            <span class="nav-caption">Les atouts du sarrasin</span>
-        </a>
-        <a mat-list-item routerLink="/recettes" (click)="onSidenavClose()">
-            <mat-icon>restaurant_menu</mat-icon>
-            <span class="nav-caption">Recettes</span>
-        </a>
-    </div>
-    <mat-divider></mat-divider>
-    <mat-list-item (click)="toggleNewsMenu()">
-        <mat-icon [@expandIconRotate]="newsMenu ? 'open' : 'closed'">navigate_next</mat-icon>
-        <span class="nav-caption">Actualités</span>
-    </mat-list-item>
-    <div [@openClose]="newsMenu ? 'open' : 'closed'">
-        <a mat-list-item href="https://www.facebook.com/Zinzin-de-Sarrasin-105029095228697" (click)="onSidenavClose()">
-            <img src="../../../../assets/img/facebook.svg" width="24px" height="24px" alt="facebook">
-            <span class="nav-caption">En images</span>
-        </a>
-        <a mat-list-item routerLink="/articles" (click)="onSidenavClose()">
-            <mat-icon>description</mat-icon>
-            <span class="nav-caption">Articles de presse</span>
-        </a>
-    </div>
-    <mat-divider></mat-divider>
-    <mat-list-item (click)="toggleDiscoveryMenu()">
-        <mat-icon [@expandIconRotate]="discoveryMenu ? 'open' : 'closed'">navigate_next</mat-icon>
-        <span class="nav-caption">Qui sommes nous</span>
-    </mat-list-item>
-    <div [@openClose]="discoveryMenu ? 'open' : 'closed'">
-        <a mat-list-item routerLink="/ferme" (click)="onSidenavClose()">
-            <mat-icon>gite</mat-icon>
-            <span class="nav-caption">Notre ferme</span>
-        </a>
-        <a mat-list-item routerLink="/pourquoi" (click)="onSidenavClose()">
-            <img src="../../../../assets/img/barley.svg" width="24px" height="24px">
-            <span class="nav-caption">Le sarrasin en Normandie</span>
-        </a>
-    </div>
-    <mat-divider></mat-divider>
-    <a mat-list-item routerLink="/contact" (click)="onSidenavClose()">
-        <mat-icon>contact_support</mat-icon>
-        <span class="nav-caption">Contact</span>   
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/commander">
+      <mat-icon>shopping_cart</mat-icon>
+      <span class="nav-caption">Commander</span>
     </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/atouts">
+      <mat-icon>add_circle_outline</mat-icon>
+      <span class="nav-caption">Les atouts du sarrasin</span>
+    </a>
+  </div>
+  <mat-divider></mat-divider>
+  <mat-list-item (click)="toggleDiscoveryMenu()">
+    <mat-icon [@expandIconRotate]="discoveryMenu ? 'open' : 'closed'">navigate_next</mat-icon>
+    <span class="nav-caption">Qui sommes nous</span>
+  </mat-list-item>
+  <div [@openClose]="discoveryMenu ? 'open' : 'closed'">
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/ferme">
+      <mat-icon>gite</mat-icon>
+      <span class="nav-caption">Notre ferme</span>
+    </a>
+    <a (click)="onSidenavClose()" mat-list-item routerLink="/pourquoi">
+      <img alt="" height="24px" src="../../../../assets/img/barley.svg" width="24px">
+      <span class="nav-caption">Le sarrasin en Normandie</span>
+    </a>
+  </div>
+  <mat-divider></mat-divider>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/contact">
+    <mat-icon>contact_support</mat-icon>
+    <span class="nav-caption">Contact</span>
+  </a>
 </mat-nav-list>
