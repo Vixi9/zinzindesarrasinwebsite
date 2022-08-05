@@ -1,41 +1,37 @@
 table {
-    width: 100%;
+  width: 100%;
 }
 
 .mat-column-ville, .mat-column-site, .mat-column-jours, .mat-column-heures {
-    text-align: left;
+  text-align: left;
 }
 
 .mat-column-query {
-    text-align: right;
+  text-align: right;
 }
 
 a {
-    line-height: 32px;
-    color: #666666;
-    transition: color ease-in 200ms;
-    text-decoration: none;
+  line-height: 32px;
+  color: #666666;
+  transition: color ease-in 200ms;
+  text-decoration: none;
 }
 
 a:hover {
-    transition: color ease-in 200ms;
-    color: #CCCCCC;
-}
-
-#map-div {
-    min-height: 500px;
+  transition: color ease-in 200ms;
+  color: #CCCCCC;
 }
 
 @media(max-width: 959px) {
-    table {
-        width: 100%;
-    }
+  table {
+    width: 100%;
+  }
 
-    .mat-column-ville, .mat-column-site, .mat-column-jours, .mat-column-heures {
-        font-size: xx-small;
-    }
+  .mat-column-ville, .mat-column-site, .mat-column-jours, .mat-column-heures {
+    font-size: xx-small;
+  }
 
-    .mat-column-query {
-        text-align: right;
-    }
+  .mat-column-query {
+    text-align: right;
+  }
 }

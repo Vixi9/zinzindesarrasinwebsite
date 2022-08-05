@@ -19,7 +19,8 @@ import {AtoutsComponent} from './atouts/atouts.component';
 import {PourquoiComponent} from './pourquoi/pourquoi.component';
 import {FacebookModule} from 'ngx-facebook';
 import {ProduitComponent} from './produit/produit.component';
-import {GoogleMapsModule} from '@angular/google-maps';
+import {HttpClientJsonpModule} from "@angular/common/http";
+import {GoogleMapsModule} from "@angular/google-maps";
 
 @NgModule({
   declarations: [
@@ -43,15 +44,16 @@ import {GoogleMapsModule} from '@angular/google-maps';
     MatFormFieldModule,
     MatTableModule,
     MatMenuModule,
+    FacebookModule,
+    HttpClientJsonpModule,
     GoogleMapsModule,
-    FacebookModule
   ],
   exports: [
     FooterComponent,
     HeaderComponent,
     SidenavListComponent,
     HomeComponent,
-  ]
+  ],
 })
 export class WebsiteModule {
 }

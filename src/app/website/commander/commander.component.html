@@ -9,26 +9,40 @@
       <p>Les commandes peuvent être récupérées sur les sites et aux horaires suivants :</p>
     </div>
     <div fxLayout="column" fxLayoutAlign="center none" fxLayoutGap="50px">
-      <table [dataSource]="lieux" aria-describedby="Lieux de vente" mat-table>
-        <ng-container matColumnDef="ville">
-          <th *matHeaderCellDef mat-header-cell> Ville</th>
-          <td *matCellDef="let lieu" mat-cell>{{lieu.ville}}</td>
+      <table [dataSource]="places" aria-describedby="Lieux de vente" mat-table>
+        <ng-container matColumnDef="name">
+          <th *matHeaderCellDef mat-header-cell> Lieu</th>
+          <td *matCellDef="let place" mat-cell>{{place.name}}</td>
         </ng-container>
-        <ng-container matColumnDef="site">
-          <th *matHeaderCellDef mat-header-cell> Site</th>
-          <td *matCellDef="let lieu" mat-cell>{{lieu.site}}</td>
+        <ng-container matColumnDef="address">
+          <th *matHeaderCellDef mat-header-cell> Adresse</th>
+          <td *matCellDef="let place" mat-cell>{{place.address}}</td>
         </ng-container>
-        <ng-container matColumnDef="jours">
+        <ng-container matColumnDef="days">
           <th *matHeaderCellDef mat-header-cell> Jours</th>
-          <td *matCellDef="let lieu" mat-cell>{{lieu.jours}}</td>
+          <td *matCellDef="let place" mat-cell>{{place.days}}</td>
         </ng-container>
-        <ng-container matColumnDef="heures">
+        <ng-container matColumnDef="hours">
           <th *matHeaderCellDef mat-header-cell> Horaires</th>
-          <td *matCellDef="let lieu" mat-cell>{{lieu.heures}}</td>
+          <td *matCellDef="let place" mat-cell>{{place.hours}}</td>
         </ng-container>
         <tr *matHeaderRowDef="columnsToDisplay" mat-header-row></tr>
         <tr *matRowDef="let row; columns: columnsToDisplay" mat-row></tr>
       </table>
+    </div>
+    <div *ngIf="apiLoaded | async">
+      <google-map [options]="mapOptions" height="90vh" width="100%">
+        <map-marker #marker="mapMarker"
+                    (mapClick)="openInfoWindow(marker, place)" *ngFor="let place of places"
+                    [position]="place.position"></map-marker>
+        <map-info-window>
+          <mat-card>
+            <mat-card-title [innerHTML]="focusedPlace.name"></mat-card-title>
+            <mat-card-subtitle [innerHTML]="focusedPlace.address"></mat-card-subtitle>
+            <mat-card-content [innerHTML]="getFocusedPlaceInfo()"></mat-card-content>
+          </mat-card>
+        </map-info-window>
+      </google-map>
     </div>
   </div>
 </div>
