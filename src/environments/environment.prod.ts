@@ -1,3 +1,4 @@
 export const environment = {
-  production: true
+  production: true,
+  googleMapsApiURL: 'https://maps.googleapis.com/maps/api/js?key=',
 };
