@@ -45,8 +45,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-apikey.json
-
-# Docker
-Dockerfile
-.dockerignore
+# Env
+/src/environments/environment.ts
+/src/environments/environment.prod.ts
+/src/environments/**
+/src/environments/
