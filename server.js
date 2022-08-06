@@ -2,8 +2,8 @@ const fs = require('fs');
 const path = require("path");
 
 const dir = "src/environments";
-const file = "environments.ts";
-const prodFile = "environments.prod.ts";
+const file = "environment.ts";
+const prodFile = "environment.prod.ts";
 
 const content = `${process.env.ENVIRONMENT}`;
 
