@@ -31,7 +31,7 @@
       </table>
     </div>
     <div *ngIf="apiLoaded | async">
-      <google-map [options]="mapOptions" height="90vh" width="100%">
+      <google-map [options]="mapOptions" height="50vh" width="100%">
         <map-marker #marker="mapMarker"
                     (mapClick)="openInfoWindow(marker, place)" *ngFor="let place of places"
                     [position]="place.position"></map-marker>

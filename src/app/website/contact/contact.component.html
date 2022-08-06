@@ -1,8 +1,12 @@
 <div class="header" fxLayout="column" fxLayoutAlign="center center">
   <h1 id="title">Coordonnees</h1>
 </div>
-<div class="wrapper" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutAlign.lt-md="start none"
-     fxLayoutGap="50px">
+<div class="wrapper" fxLayout.gt-md="row" fxLayout.lt-md="column" fxLayoutAlign="center center" fxLayoutGap="30px">
+  <div *ngIf="apiLoaded | async" id="map-div">
+    <google-map [options]="mapOptions" height="50vh" width="100%">
+      <map-marker [position]="markerPositions"></map-marker>
+    </google-map>
+  </div>
   <mat-list fxFlex.gt-md="30" fxLayout="column" fxLayoutAlign="start" id="coordonnees">
     <a mat-list-item>Patrick Brionne</a>
     <a mat-list-item>Le Cerisier</a>
