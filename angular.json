@@ -6,7 +6,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "zinzindusarrasin": {
+    "zinzindesarrasin": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -75,10 +75,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "zinzindusarrasin:build:production"
+              "browserTarget": "zinzindesarrasin:build:production"
             },
             "development": {
-              "browserTarget": "zinzindusarrasin:build:development"
+              "browserTarget": "zinzindesarrasin:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -86,7 +86,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "zinzindusarrasin:build"
+            "browserTarget": "zinzindesarrasin:build"
           }
         },
         "test": {
