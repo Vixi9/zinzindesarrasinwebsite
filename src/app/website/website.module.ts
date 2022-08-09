@@ -17,7 +17,6 @@ import {MatMenuModule} from '@angular/material/menu';
 import {FermeComponent} from './ferme/ferme.component';
 import {AtoutsComponent} from './atouts/atouts.component';
 import {PourquoiComponent} from './pourquoi/pourquoi.component';
-import {FacebookModule} from 'ngx-facebook';
 import {ProduitComponent} from './produit/produit.component';
 import {HttpClientJsonpModule} from "@angular/common/http";
 import {GoogleMapsModule} from "@angular/google-maps";
@@ -44,7 +43,6 @@ import {GoogleMapsModule} from "@angular/google-maps";
     MatFormFieldModule,
     MatTableModule,
     MatMenuModule,
-    FacebookModule,
     HttpClientJsonpModule,
     GoogleMapsModule,
   ],
