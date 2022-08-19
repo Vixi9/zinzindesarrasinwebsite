@@ -1,25 +1,45 @@
-h1 {
+.parallax {
+  position: relative;
+  overflow: hidden;
+}
+
+.blob-container {
+  height: 100vh;
+  width: 100%;
+  --offset: 0
+}
+
+.background-container {
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-height: max-content;
+  overflow: revert;
+  --offset: 0.7;
+  transform: translateY(calc(var(--scrollPos, 0) * var(--offset, 0)));
+}
+
+.blob {
+  animation: blob-morph 20s ease-in-out infinite;
+  transform-origin: 50% 50%;
+}
+
+.part-one {
   font-family: Explorer, sans-serif;
-  font-size: xx-large;
-  color: #5e5c5d;
-}
-
-p {
+  text-align: justify;
   font-size: x-large;
-  line-height: 32px;
-  text-align: center;
+  line-height: 2em;
+  padding: 0 10% 0 10%;
+  background-color: #EFE8DF;
 }
 
-#logo {
-  width: 35%;
-}
-
-@media(max-width: 959px) {
-  h1 {
-    font-size: large;
+@keyframes blob-morph {
+  0% {
+    transform: rotate(0);
   }
-
-  #logo {
-    width: 85%;
+  100% {
+    transform: rotate(360deg);
   }
 }
