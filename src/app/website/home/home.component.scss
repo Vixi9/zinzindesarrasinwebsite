@@ -1,7 +1,7 @@
 .section {
   height: calc(100vh - 75px);
   background: url("../../../assets/img/path2.svg");
-  background-size: contain;
+  background-size: auto 100%;
 }
 
 .first {
@@ -10,6 +10,12 @@
   justify-content: center;
   align-items: center;
   background: center url("../../../assets/img/path1.svg");
+}
+
+.last {
+  max-height: 200px;
+  background: url("../../../assets/img/path3.svg");
+  background-size: auto 100%;
 }
 
 .logo {

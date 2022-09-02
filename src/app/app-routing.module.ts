@@ -10,14 +10,14 @@ import {PourquoiComponent} from './website/pourquoi/pourquoi.component';
 import {ProduitComponent} from './website/produit/produit.component';
 
 const routes: Routes = [
-  {path: 'accueil', component: HomeComponent},
+  {path: '', component: HomeComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'commander', component: CommanderComponent},
   {path: 'ferme', component: FermeComponent},
   {path: 'atouts', component: AtoutsComponent},
   {path: 'pourquoi', component: PourquoiComponent},
   {path: 'produit', component: ProduitComponent},
-  {path: '**', redirectTo: '/accueil', pathMatch: 'full'},
+  {path: '**', redirectTo: '', pathMatch: 'full'},
 ];
 
 @NgModule({
