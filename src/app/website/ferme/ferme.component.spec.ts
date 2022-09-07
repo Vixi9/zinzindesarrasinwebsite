@@ -7,9 +7,7 @@ describe('FermeComponent', () => {
   let fixture: ComponentFixture<FermeComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ FermeComponent ]
-    })
+    await TestBed.configureTestingModule({ declarations: [ FermeComponent ] })
     .compileComponents();
   });
 

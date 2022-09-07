@@ -7,9 +7,7 @@ describe('CommanderComponent', () => {
   let fixture: ComponentFixture<CommanderComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ CommanderComponent ]
-    })
+    await TestBed.configureTestingModule({ declarations: [ CommanderComponent ] })
     .compileComponents();
   });
 

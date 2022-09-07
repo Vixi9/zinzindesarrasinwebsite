@@ -23,12 +23,8 @@ import { animate, state, style, transition, trigger } from '@angular/animations'
     ]),
 
     trigger('expandIconRotate', [
-      state('open', style({
-        transform: 'rotate(90deg)'
-      })),
-      state('closed', style({
-        transform: 'none'
-      })),
+      state('open', style({ transform: 'rotate(90deg)' })),
+      state('closed', style({ transform: 'none' })),
       transition('closed <=> open', [
         animate('200ms')
       ])

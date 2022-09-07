@@ -7,9 +7,7 @@ describe('PourquoiComponent', () => {
   let fixture: ComponentFixture<PourquoiComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ PourquoiComponent ]
-    })
+    await TestBed.configureTestingModule({ declarations: [ PourquoiComponent ] })
     .compileComponents();
   });
 

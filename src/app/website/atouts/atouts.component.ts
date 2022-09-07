@@ -6,5 +6,4 @@ import { Component } from '@angular/core';
   styleUrls: [ './atouts.component.scss', '../website.scss' ]
 })
 export class AtoutsComponent {
-
 }

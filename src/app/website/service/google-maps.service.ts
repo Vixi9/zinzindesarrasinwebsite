@@ -3,9 +3,7 @@ import { HttpClient } from "@angular/common/http";
 import { environment } from "../../../environments/environment";
 import { BehaviorSubject } from "rxjs";
 
-@Injectable({
-  providedIn: 'root'
-})
+@Injectable({ providedIn: 'root' })
 export class GoogleMapsService {
   private apiLoaded: BehaviorSubject<boolean> = new BehaviorSubject(false);
   isApiLoaded = this.apiLoaded.asObservable();

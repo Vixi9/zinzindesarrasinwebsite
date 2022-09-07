@@ -7,9 +7,7 @@ describe('ContactComponent', () => {
   let fixture: ComponentFixture<ContactComponent>;
 
   beforeEach(async () => {
-    await TestBed.configureTestingModule({
-      declarations: [ ContactComponent ]
-    })
+    await TestBed.configureTestingModule({ declarations: [ ContactComponent ] })
     .compileComponents();
   });
 
