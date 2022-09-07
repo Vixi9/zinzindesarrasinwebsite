@@ -1,21 +1,29 @@
+h1 {
+  font-family: Explorer, sans-serif;
+  font-size: xx-large;
+  line-height: 1.5em;
+  color: white;
+}
+
 .section {
-  height: calc(100vh - 75px);
-  background: url("../../../assets/img/path2.svg");
+  margin: 250px 0;
+  padding: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: url("../../../assets/img/path2.svg") repeat-x;
   background-size: auto 100%;
+  text-align: center;
 }
 
 .first {
+  height: calc(100vh - 75px);
   flex-direction: column;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: center url("../../../assets/img/path1.svg");
-}
-
-.last {
-  max-height: 200px;
-  background: url("../../../assets/img/path3.svg");
-  background-size: auto 100%;
+  background: center url("../../../assets/img/path1.svg") repeat-x;
 }
 
 .logo {
