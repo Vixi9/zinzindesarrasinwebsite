@@ -1,10 +1,10 @@
-import { Component, OnInit, EventEmitter, Output } from '@angular/core';
-import { animation, style, animate, trigger, transition, state } from '@angular/animations';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 
 @Component({
   selector: 'app-sidenav-list',
   templateUrl: './sidenav-list.component.html',
-  styleUrls: ['./sidenav-list.component.scss'],
+  styleUrls: [ './sidenav-list.component.scss' ],
   animations: [
     trigger('openClose', [
       state('open', style({
@@ -21,7 +21,7 @@ import { animation, style, animate, trigger, transition, state } from '@angular/
         animate('200ms')
       ])
     ]),
-    
+
     trigger('expandIconRotate', [
       state('open', style({
         transform: 'rotate(90deg)'
@@ -35,18 +35,14 @@ import { animation, style, animate, trigger, transition, state } from '@angular/
     ])
   ]
 })
-export class SidenavListComponent implements OnInit {
+export class SidenavListComponent {
 
   @Output() sidenavClose = new EventEmitter();
 
   productMenu: boolean = false;
   newsMenu: boolean = false;
   discoveryMenu: boolean = false;
-  
-  constructor() { }
 
-  ngOnInit(): void {
-  }
 
   toggleProductMenu() {
     this.productMenu = !this.productMenu;
