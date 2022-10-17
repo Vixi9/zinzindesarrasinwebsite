@@ -1,5 +1,5 @@
-import { animate, state, style, transition, trigger } from '@angular/animations';
-import { Component, HostListener, OnInit } from '@angular/core';
+import {animate, style, transition, trigger} from '@angular/animations';
+import {Component} from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -14,11 +14,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
     ]),
   ],
 })
-export class HomeComponent implements OnInit {
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+export class HomeComponent {
 
   scrollTo(el: HTMLElement, block : ScrollLogicalPosition): void {
     el.scrollIntoView({behavior: "smooth", block: block, inline:"start"});

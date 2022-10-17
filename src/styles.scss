@@ -88,29 +88,13 @@ $zinzindesarrasin-theme: mat.define-light-theme((
   src: url("assets/fonts/Bosch-Personal-Use.otf") format("opentype");
 }
 
-body {
-  margin: 0;
-}
-
-html, body {
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  font-family: Roboto,
-  "Helvetica Neue", sans-serif;
-}
-
 .mat-list-item-content > .nav-caption {
   margin-left: 10px;
 }
 
 html, body {
   height: 100%;
-}
-
-body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  font-family: Roboto,
+  "Helvetica Neue", sans-serif;
 }
