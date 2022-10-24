@@ -4,39 +4,15 @@
     <span class="nav-caption">Accueil</span>
   </a>
   <mat-divider></mat-divider>
-  <mat-list-item (click)="toggleProductMenu()">
-    <mat-icon [@expandIconRotate]="productMenu ? 'open' : 'closed'">navigate_next</mat-icon>
-    <span class="nav-caption">Nos galettes</span>
-  </mat-list-item>
-  <div [@openClose]="productMenu ? 'open' : 'closed'">
-    <a (click)="onSidenavClose()" mat-list-item routerLink="/produit">
-      <img alt="" height="24px" src="../../../../assets/img/galette.svg" width="24px">
-      <span class="nav-caption">Le produit</span>
-    </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLink="/commander">
-      <mat-icon>shopping_cart</mat-icon>
-      <span class="nav-caption">Commander</span>
-    </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLink="/atouts">
-      <mat-icon>add_circle_outline</mat-icon>
-      <span class="nav-caption">Les atouts du sarrasin</span>
-    </a>
-  </div>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/produits">
+    <mat-icon>shopping_cart</mat-icon>
+    <span class="nav-caption">Nos produits</span>
+  </a>
   <mat-divider></mat-divider>
-  <mat-list-item (click)="toggleDiscoveryMenu()">
-    <mat-icon [@expandIconRotate]="discoveryMenu ? 'open' : 'closed'">navigate_next</mat-icon>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/pourquoi">
+    <mat-icon>gite</mat-icon>
     <span class="nav-caption">Qui sommes nous</span>
-  </mat-list-item>
-  <div [@openClose]="discoveryMenu ? 'open' : 'closed'">
-    <a (click)="onSidenavClose()" mat-list-item routerLink="/ferme">
-      <mat-icon>gite</mat-icon>
-      <span class="nav-caption">Notre ferme</span>
-    </a>
-    <a (click)="onSidenavClose()" mat-list-item routerLink="/pourquoi">
-      <img alt="" height="24px" src="../../../../assets/img/barley.svg" width="24px">
-      <span class="nav-caption">Le sarrasin en Normandie</span>
-    </a>
-  </div>
+  </a>
   <mat-divider></mat-divider>
   <a (click)="onSidenavClose()" mat-list-item routerLink="/contact">
     <mat-icon>contact_support</mat-icon>

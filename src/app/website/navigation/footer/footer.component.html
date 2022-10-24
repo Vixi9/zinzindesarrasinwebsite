@@ -1,13 +1,13 @@
-<div class="mat-toolbar dark" fxLayout="row" fxLayout.lt-sm="column" fxLayoutAlign="space-evenly stretch">
-  <mat-list fxLayout="column" fxLayoutAlign="start">
+<div class="footer">
+  <mat-list dense>
     <div mat-subheader>Liens Utiles</div>
-    <a mat-list-item routerLink="/accueil">Accueil</a>
-    <a mat-list-item routerLink="/commander">Commander</a>
+    <a mat-list-item routerLink="/">Accueil</a>
+    <a mat-list-item routerLink="/produits">Produits</a>
     <a mat-list-item routerLink="/contact">Contact</a>
     <a href="https://www.facebook.com/Zinzin-de-Sarrasin-105029095228697" id="facebook-link" mat-list-item><img
       alt="facebook" height="24px" src="../../../../assets/img/facebook.svg" width="24px"></a>
   </mat-list>
-  <mat-list fxLayout="column" fxLayoutAlign="start">
+  <mat-list dense>
     <div mat-subheader>Coordonnées</div>
     <a mat-list-item>Patrick Brionne</a>
     <a mat-list-item>Le Cerisier</a>
@@ -15,11 +15,10 @@
     <a href="mailto:zinzindesarrasin@gmail.com" mat-list-item>zinzindesarrasin@gmail.com</a>
     <a mat-list-item>06 82 92 28 38</a>
   </mat-list>
-  <mat-list fxLayout="column" fxLayoutAlign="start" fxLayoutGap="10px">
-    <div mat-subheader>Références</div>
-    <a mat-list-item>Ce projet est soutenu par la région Normandie et par le département de l'Orne</a>
-    <div fxLayout="row" fxLayoutAlign="start center" fxLayoutGap="10px" id="div-references" mat-list-item>
-      <a class="lien-reference" href="https://normandie.fr/" id="lien-normandie">
+  <mat-list dense>
+    <div mat-subheader>Partenaires</div>
+    <div class="partners">
+      <a mat-list-item href="https://normandie.fr/" id="lien-normandie">
         <img alt="normandie.fr"
              class="logo-reference"
              height="50"
@@ -35,6 +34,6 @@
     </div>
   </mat-list>
 </div>
-<div class="x-dark" fxLayout="row" fxLayoutAlign="center stretch">
-  <p>&copy; Tous droits réservés. 2022 Zinzindesarrasin</p>
+<div class="copyrights">
+  <span>&copy; Tous droits réservés. 2022 Zinzindesarrasin</span>
 </div>

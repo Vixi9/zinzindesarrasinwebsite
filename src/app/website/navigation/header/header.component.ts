@@ -9,7 +9,6 @@ export class HeaderComponent {
 
   @Output() public sidenavToggle = new EventEmitter();
 
-
   public onToggleSidenav = () => {
     this.sidenavToggle.emit();
   }

@@ -1,11 +1,11 @@
-<mat-toolbar color="primary" fxLayout="row" fxLayoutAlign="space-around center">
-  <div fxFlex="100" fxHide.gt-sm fxLayout="row" fxLayoutAlign="space-between center">
+<mat-toolbar color="primary">
+  <div class="mobile">
     <button (click)="onToggleSidenav()" aria-label="menu" mat-icon-button>
       <mat-icon class="grey">menu</mat-icon>
     </button>
     <a routerLink="/accueil">
       <button id="title-mobile" mat-button>
-        <div fxLayout="column" fxLayoutAlign="center" id="logo-mobile">
+        <div class="logo">
           <span>Zinzin</span>
           <span>de</span>
           <span>Sarrasin</span>
@@ -13,12 +13,12 @@
       </button>
     </a>
   </div>
-  <div fxFlex="50" fxFlex.lt-lg="100" fxHide.lt-md>
-    <mat-list class="navigation-items" fxLayout>
+  <div class="desktop">
+    <mat-list class="navigation-items">
       <mat-list-item>
         <a routerLink="/accueil">
           <button id="title-desktop" mat-button>
-            <div fxLayout="column" fxLayoutAlign="center" id="logo-desktop">
+            <div class="logo">
               <span>Zinzin</span>
               <span>de</span>
               <span>Sarrasin</span>
@@ -27,20 +27,11 @@
         </a>
       </mat-list-item>
       <mat-list-item>
-        <a [matMenuTriggerFor]="menuProduit" mat-button>Nos Galettes</a>
+        <a mat-button routerLink="/produits">Nos produits</a>
       </mat-list-item>
-      <mat-menu #menuProduit>
-        <a mat-menu-item routerLink="/produit">Le produit</a>
-        <a mat-menu-item routerLink="/commander">Commander</a>
-        <a mat-menu-item routerLink="/atouts">Les atouts du sarrasin</a>
-      </mat-menu>
       <mat-list-item>
-        <a [matMenuTriggerFor]="menuDecouverte" mat-button>Qui sommes nous</a>
+        <a mat-button routerLink="/pourquoi">Qui sommes nous</a>
       </mat-list-item>
-      <mat-menu #menuDecouverte>
-        <a mat-menu-item routerLink="/ferme">Notre ferme</a>
-        <a mat-menu-item routerLink="/pourquoi">Le sarrasin en Normandie</a>
-      </mat-menu>
       <mat-list-item>
         <a mat-button routerLink="/contact">Contact</a>
       </mat-list-item>

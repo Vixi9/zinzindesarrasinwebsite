@@ -1,13 +1,17 @@
-<div>
-  <div class="first">
-    <svg class="logo" fill="none" height="600" viewBox="0 0 500 500" width="600" xmlns="http://www.w3.org/2000/svg">
-      <path class="blob"
-            d="M252.037 43.0005C341.888 43.1852 426.96 92.1204 455.49 177.258C484.775 264.646 451.082 360.282 376.551 414.562C301.666 469.099 200.293 472.006 125.128 417.856C49.1244 363.1 15.9652 265.106 45.9913 176.416C74.9865 90.7715 161.556 42.8146 252.037 43.0005Z"
-            fill="#5E5C5D"/>
-      <image height="400" width="400" x="50" xlink:href="../../../assets/img/logo_alt.webp" y="50"/>
-    </svg>
+<div class="wrapper">
+  <div class="link" matRipple>
+    <img alt="" src="assets/img/logo.webp" id="logo" class="background"/>
   </div>
-  <div class="section">
-    <h1>Bienvenue chez Zinzin de Sarrasin !</h1>
-  </div>
+  <a class="link" matRipple routerLink="/produits">
+    <img alt="" src="assets/img/products.webp" class="background"/>
+    <h2>Nos produits</h2>
+  </a>
+  <a class="link" matRipple routerLink="/produits">
+    <img alt="" src="assets/img/about.webp" class="background landscape "/>
+    <h2>A propos de nous</h2>
+  </a>
+  <a class="link" matRipple routerLink="/produits">
+    <img alt="" src="assets/img/contact.webp" class="background landscape"/>
+    <h2>Nous contacter</h2>
+  </a>
 </div>

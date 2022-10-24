@@ -1,47 +1,95 @@
-h1 {
-  font-family: Explorer, sans-serif;
-  font-size: xx-large;
-  line-height: 1.5em;
-  color: white;
-}
-
-.section {
-  margin: 250px 0;
-  padding: 100px;
+.wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background: url("../../../assets/img/path2.svg") repeat-x;
-  background-size: auto 100%;
-  text-align: center;
-}
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 10px;
 
-.first {
-  height: calc(100vh - 75px);
-  flex-direction: column;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: center url("../../../assets/img/path1.svg") repeat-x;
-}
+  .link {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    width: calc(100vw - 20px);
+    height: calc(100vw - 20px);
+    border-radius: 25px;
 
-.logo {
-  width: 80vw;
-  max-width: 600px;
-  text-shadow: 0 10px 50px -10px #000000;
-}
+    h2 {
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      text-align: center;
+      color: white;
+    }
 
-.blob {
-  animation: blob-rotate 20s ease-in-out infinite;
-  transform-origin: 50% 50%;
-}
+    .background {
+      position: absolute;
+      top: -25%;
+      width: 100%;
+      height: auto;
+      filter: brightness(0.5);
 
-@keyframes blob-rotate {
-  0% {
-    transform: rotate(0);
+      transition-duration: 500ms;
+    }
+
+    .landscape {
+      position: absolute;
+      top: 0;
+      left: -20%;
+      width: auto;
+      height: 100%;
+    }
+
+    #logo {
+      top: 0;
+      filter: none;
+    }
+
+    &:hover {
+
+      .background {
+        transform: scale(1.05);
+        transition-duration: 500ms;
+      }
+    }
   }
-  100% {
-    transform: rotate(360deg);
+}
+
+@media screen and (min-width: 600px) {
+
+  .wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+
+    .link {
+      width: calc(50vw - 15px);
+      height: calc(50vw - 15px);
+
+      h2 {
+        font-size: x-large;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+
+  .wrapper {
+    .link {
+      width: calc(33vw - 15px);
+      height: calc(33vw - 15px);
+    }
+
+    .link:first-child {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      #logo {
+        width: auto;
+        height: 100%;
+      }
+    }
   }
 }
