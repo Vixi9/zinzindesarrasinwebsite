@@ -1,29 +1,97 @@
-table {
-  width: 50%;
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding: 10px;
+  gap: 35px;
+
+  .section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    .illustration {
+      position: relative;
+      overflow: hidden;
+      width: calc(100vw - 20px);
+      height: calc(100vw - 20px);
+      border-radius: 25px;
+
+      img {
+        position: absolute;
+        height: 100%;
+      }
+
+      .galettes {
+        transform: scaleX(-1);
+        left: -40%;
+      }
+
+      .petales {
+        left: -20%;
+      }
+    }
+
+    .section-paragraph {
+      display: flex;
+      flex-direction: column;
+      padding: 0 10px;
+      border-radius: 25px;
+
+      h2 {
+        font-family: Explorer, sans-serif;
+      }
+
+      p {
+        font-size: large;
+        text-align: justify;
+      }
+
+      .section-logos {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 16px;
+
+        .logo {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          flex-wrap: wrap;
+          gap: 10px;
+        }
+      }
+    }
+  }
 }
 
-.body {
-  text-align: center;
-  font-size: large;
-  min-height: calc(100vh - 510px);
-}
+@media screen and (min-width: 768px) {
 
-.mat-column-ville, .mat-column-site, .mat-column-jours {
-  text-align: left;
-}
+  .wrapper {
 
-.mat-column-heures {
-  text-align: right;
-}
+    .section {
+      min-height: calc(100vh - 75px);
+      flex-direction: row;
 
-a {
-  line-height: 32px;
-  color: #666666;
-  transition: color ease-in 200ms;
-  text-decoration: none;
-}
+      .illustration {
+        position: relative;
+        overflow: hidden;
+        width: calc(50vw - 15px);
+        height: calc(50vw - 15px);
+        max-width: 500px;
+        max-height: 500px;
+      }
 
-a:hover {
-  transition: color ease-in 200ms;
-  color: #CCCCCC;
+      .section-paragraph {
+        width: calc(50vw - 40px);
+      }
+
+      &:nth-child(even) {
+        flex-direction: row-reverse;
+      }
+    }
+  }
 }
