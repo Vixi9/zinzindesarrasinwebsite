@@ -6,23 +6,40 @@
 
   background-color: #5E5C5D;
 
-  mat-list {
-    .mat-subheader {
-      color: #DDDDDD;
+  .list {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    min-width: calc(33vw - 50px);
+
+    .header {
+      color: white;
+      font-size: large;
+      padding-bottom: 16px;
     }
 
-    .mat-list-item {
+    span, a {
+      transition-duration: 200ms;
+
+      padding-bottom: 10px;
       text-decoration: none;
-      color: #CCCCCC;
-      font-size: small;
+      font-size: medium;
+      color: #EEEEEE;
+    }
+
+    a:hover {
+      transition-duration: 200ms;
+
+      color: #d7ae0d;
     }
 
     .partners {
-      padding: 0 16px;
+      flex-direction: row;
+      gap: 10px;
+      justify-content: center;
       height: 70px;
       display: flex;
-      flex-direction: row-reverse;
-      gap: 10px;
     }
 
     #facebook-link {
@@ -38,18 +55,8 @@
   background-color: #333333;
 }
 
-@media screen and (min-width: 425px) {
+@media screen and (min-width: 600px) {
   .footer {
-    display: flex;
     flex-direction: row;
-
-    mat-list {
-      .partners {
-        height: 70px;
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-      }
-    }
   }
 }
