@@ -11,7 +11,6 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { FooterComponent } from './navigation/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-import { PourquoiComponent } from './pourquoi/pourquoi.component';
 import { ProduitComponent } from './produit/produit.component';
 import { HttpClientJsonpModule } from "@angular/common/http";
 import { GoogleMapsModule } from "@angular/google-maps";
@@ -28,7 +27,6 @@ import { MatToolbarModule } from "@angular/material/toolbar";
     HomeComponent,
     ContactComponent,
     FooterComponent,
-    PourquoiComponent,
     ProduitComponent,
   ],
   imports: [

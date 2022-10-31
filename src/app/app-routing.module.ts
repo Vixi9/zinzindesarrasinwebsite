@@ -3,13 +3,12 @@ import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './website/home/home.component';
 import { ContactComponent } from './website/contact/contact.component';
-import { PourquoiComponent } from './website/pourquoi/pourquoi.component';
 import { ProduitComponent } from './website/produit/produit.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'contact', component: ContactComponent },
-  { path: 'pourquoi', component: PourquoiComponent },
+  { path: 'a-propos', component: ContactComponent },
   { path: 'produits', component: ProduitComponent },
   { path: '**', redirectTo: '', pathMatch: 'full' },
 ];

@@ -48,6 +48,18 @@
       p {
         font-size: large;
         text-align: justify;
+
+        a {
+          transition-duration: 200ms;
+
+          color: #333333;
+
+          &:hover {
+            transition-duration: 200ms;
+
+            color: #d7ae0d;
+          }
+        }
       }
 
       .section-logos {
@@ -94,7 +106,7 @@
         width: calc(50vw - 40px);
       }
 
-      &:nth-child(even) {
+      &:nth-child(odd) {
         flex-direction: row-reverse;
       }
     }
