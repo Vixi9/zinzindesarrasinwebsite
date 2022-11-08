@@ -1,17 +1,17 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HeaderComponent } from './navigation/header/header.component';
-import { SidenavListComponent } from './navigation/sidenav-list/sidenav-list.component';
-import { HomeComponent } from './home/home.component';
+import { HeaderComponent } from './components/navigation/header/header.component';
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import { HomeComponent } from './components/home/home.component';
 
 import { RouterModule } from '@angular/router';
-import { ContactComponent } from './contact/contact.component';
+import { ContactComponent } from './components/contact/contact.component';
 import { MatInputModule } from '@angular/material/input';
 import { MatFormFieldModule } from '@angular/material/form-field';
-import { FooterComponent } from './navigation/footer/footer.component';
+import { FooterComponent } from './components/navigation/footer/footer.component';
 import { MatTableModule } from '@angular/material/table';
 import { MatMenuModule } from '@angular/material/menu';
-import { ProduitComponent } from './produit/produit.component';
+import { ProduitComponent } from './components/produit/produit.component';
 import { HttpClientJsonpModule } from "@angular/common/http";
 import { GoogleMapsModule } from "@angular/google-maps";
 import { MatRippleModule } from "@angular/material/core";
@@ -20,6 +20,8 @@ import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { MatCardModule } from "@angular/material/card";
+import { AboutComponent } from './components/about/about.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +31,8 @@ import { MatCardModule } from "@angular/material/card";
     ContactComponent,
     FooterComponent,
     ProduitComponent,
+    AboutComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     CommonModule,

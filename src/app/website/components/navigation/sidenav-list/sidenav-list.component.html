@@ -1,0 +1,21 @@
+<mat-nav-list>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/accueil">
+    <mat-icon>home</mat-icon>
+    <span class="nav-caption">Accueil</span>
+  </a>
+  <mat-divider></mat-divider>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/produits">
+    <mat-icon>shopping_bag</mat-icon>
+    <span class="nav-caption">Produits</span>
+  </a>
+  <mat-divider></mat-divider>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/a-propos">
+    <mat-icon>gite</mat-icon>
+    <span class="nav-caption">A propos</span>
+  </a>
+  <mat-divider></mat-divider>
+  <a (click)="onSidenavClose()" mat-list-item routerLink="/contact">
+    <mat-icon>contact_support</mat-icon>
+    <span class="nav-caption">Contact</span>
+  </a>
+</mat-nav-list>
