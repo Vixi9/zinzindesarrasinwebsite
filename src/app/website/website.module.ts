@@ -1,25 +1,27 @@
-import {NgModule} from '@angular/core';
-import {CommonModule} from '@angular/common';
-import {HeaderComponent} from './navigation/header/header.component';
-import {SidenavListComponent} from './navigation/sidenav-list/sidenav-list.component';
-import {HomeComponent} from './home/home.component';
-import {FlexLayoutModule} from '@angular/flex-layout';
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { HeaderComponent } from './components/navigation/header/header.component';
+import { SidenavListComponent } from './components/navigation/sidenav-list/sidenav-list.component';
+import { HomeComponent } from './components/home/home.component';
 
-import {MaterialModule} from '../material/material.module';
-import {RouterModule} from '@angular/router';
-import {ContactComponent} from './contact/contact.component';
-import {MatInputModule} from '@angular/material/input';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import {FooterComponent} from './navigation/footer/footer.component';
-import {MatTableModule} from '@angular/material/table';
-import {CommanderComponent} from './commander/commander.component';
-import {MatMenuModule} from '@angular/material/menu';
-import {FermeComponent} from './ferme/ferme.component';
-import {AtoutsComponent} from './atouts/atouts.component';
-import {PourquoiComponent} from './pourquoi/pourquoi.component';
-import {ProduitComponent} from './produit/produit.component';
-import {HttpClientJsonpModule} from "@angular/common/http";
-import {GoogleMapsModule} from "@angular/google-maps";
+import { RouterModule } from '@angular/router';
+import { ContactComponent } from './components/contact/contact.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FooterComponent } from './components/navigation/footer/footer.component';
+import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
+import { ProduitComponent } from './components/produit/produit.component';
+import { HttpClientJsonpModule } from "@angular/common/http";
+import { GoogleMapsModule } from "@angular/google-maps";
+import { MatRippleModule } from "@angular/material/core";
+import { MatButtonModule } from "@angular/material/button";
+import { MatListModule } from "@angular/material/list";
+import { MatIconModule } from "@angular/material/icon";
+import { MatToolbarModule } from "@angular/material/toolbar";
+import { MatCardModule } from "@angular/material/card";
+import { AboutComponent } from './components/about/about.component';
+import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 
 @NgModule({
   declarations: [
@@ -28,16 +30,12 @@ import {GoogleMapsModule} from "@angular/google-maps";
     HomeComponent,
     ContactComponent,
     FooterComponent,
-    CommanderComponent,
-    FermeComponent,
-    AtoutsComponent,
-    PourquoiComponent,
     ProduitComponent,
+    AboutComponent,
+    LegalNoticeComponent,
   ],
   imports: [
     CommonModule,
-    FlexLayoutModule,
-    MaterialModule,
     RouterModule,
     MatInputModule,
     MatFormFieldModule,
@@ -45,6 +43,12 @@ import {GoogleMapsModule} from "@angular/google-maps";
     MatMenuModule,
     HttpClientJsonpModule,
     GoogleMapsModule,
+    MatRippleModule,
+    MatButtonModule,
+    MatListModule,
+    MatIconModule,
+    MatToolbarModule,
+    MatCardModule,
   ],
   exports: [
     FooterComponent,

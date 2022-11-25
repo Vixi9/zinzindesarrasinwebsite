@@ -75,7 +75,7 @@ $zinzindesarrasin-theme: mat.define-light-theme((
 
 @font-face {
   font-family: Explorer;
-  src: url("assets/fonts/ExplorerFree-Regular.otf") format("opentype");
+  src: url("assets/fonts/Explorer.otf") format("opentype");
 }
 
 @font-face {
@@ -85,7 +85,25 @@ $zinzindesarrasin-theme: mat.define-light-theme((
 
 @font-face {
   font-family: Bosch;
-  src: url("assets/fonts/Bosch-Personal-Use.otf") format("opentype");
+  src: url("assets/fonts/Bosch.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Neucha;
+  src: url("assets/fonts/Neucha.ttf") format("truetype");
+}
+
+body {
+  margin: 0;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Neucha, sans-serif;
 }
 
 .mat-list-item-content > .nav-caption {
@@ -94,7 +112,10 @@ $zinzindesarrasin-theme: mat.define-light-theme((
 
 html, body {
   height: 100%;
-  margin: 0;
-  font-family: Roboto,
-  "Helvetica Neue", sans-serif;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }

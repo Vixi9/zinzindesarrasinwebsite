@@ -1,0 +1,150 @@
+<div class="wrapper">
+  <div class="section">
+    <div class="illustration" *ngIf="apiLoaded | async">
+      <google-map [options]="mapOptions" height="500px" width="100%">
+        <map-marker #marker="mapMarker"
+                    (mapClick)="openInfoWindow(marker, place)" *ngFor="let place of places"
+                    [position]="place.position"></map-marker>
+        <map-info-window>
+          <mat-card>
+            <mat-card-title [innerHTML]="focusedPlace.name"></mat-card-title>
+            <mat-card-subtitle [innerHTML]="focusedPlace.address"></mat-card-subtitle>
+            <mat-card-content [innerHTML]="getFocusedPlaceInfo()"></mat-card-content>
+          </mat-card>
+        </map-info-window>
+      </google-map>
+    </div>
+    <div class="section-paragraph">
+      <h2>Ou acheter nos produits ?</h2>
+      <p>
+        Nos galettes sont disponibles sur commande via notre adresse mail : <a href="mailto:zinzindesarrasin@gmail.com">zinzindesarrasin@gmail.com</a>.
+        Les commandes peuvent être récupérées sur les sites et aux horaires suivants :
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="illustration">
+      <img class="galettes" alt="" src="../../../../assets/img/galette.webp">
+    </div>
+    <div class="section-paragraph">
+      <h2>Nos galettes de sarrasin</h2>
+      <p>
+        Produites de mani&egrave;re artisanales et tourn&eacute;es &agrave; la main, elles sont &eacute;galement
+        biologiques et sans gluten. Elles sont fabriqu&eacute;es &agrave; partir notre farine de sarrasin, d&apos;eau et
+        de sel de gu&eacute;rande. Elles ne contiennent aucun produit d&apos;origine animale que ce soit du lait ou des
+        oeufs ce qui leur permet d&#39;&ecirc;tre &eacute;galement vegan. Elles sont ensuite cuites sur des plaques en
+        fonte. Elles sont non-garnies, ce qui vous permet de donner libre cours &agrave; toutes vos envies, sal&eacute;es
+        ou sucr&eacute;es.
+      </p>
+      <div class="section-logos">
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/AB.svg" height="30">
+          <span>Biologique</span>
+        </div>
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/gluten.svg" height="30">
+          <span>Sans gluten</span>
+        </div>
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/vegetarian-mark.svg" height="30">
+          <span>Végétarien et Vegan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="illustration">
+      <img class="petales" alt="" src="../../../../assets/img/farine.webp">
+    </div>
+    <div class="section-paragraph">
+      <h2>Notre farine de sarrasin</h2>
+      <p>
+        Moulue &agrave; la ferme, notre farine de sarrasin est cultiv&eacute;e sur 4 hectares de sarrasin sur la commune
+        de Champsecret, &agrave; 4 km de Domfront-en-Poiraie. Tout est fait &agrave; la main, du semis au s&eacute;chage,
+        pour pr&eacute;server au maximum les qualit&eacute;s nutritionnelles du grain. La
+        farine est ensuite meul&eacute;e &agrave; la meule de pierre sur place, sans adjonction d&rsquo;aucun additif.
+        Elle est également biologique, vegan et sans gluten.
+      </p>
+      <div class="section-logos">
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/AB.svg" height="30">
+          <span>Biologique</span>
+        </div>
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/gluten.svg" height="30">
+          <span>Sans gluten</span>
+        </div>
+        <div class="logo">
+          <img alt="" src="../../../../assets/img/vegetarian-mark.svg" height="30">
+          <span>Végétarien et Vegan</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="illustration">
+      <img alt="" src="../../../../assets/img/plante.webp">
+    </div>
+    <div class="section-paragraph">
+      <h2>Interets nutritionels</h2>
+      <p>
+        Le sarrasin est couramment appel&eacute; &ldquo;bl&eacute; noir&rdquo; mais ne fait pas partie des vari&eacute;t&eacute;s
+        de bl&eacute; ni de la famille des
+        gramin&eacute;es. C&rsquo;est une plante &agrave; fleurs annuelle de la famille des polygonac&eacute;es (comme l&rsquo;oseille,
+        le rumex &ndash;
+        commun&eacute;ment appel&eacute; &quot;doche&quot; dans le bocage - et la rhubarbe).
+      </p>
+      <p>
+        Il produit des graines qui ont la forme d&rsquo;une petite pyramide &agrave; trois pans (un nucule
+        triangulaire).
+        Le sarrasin est hautement nutritif, antioxydant, riche en prot&eacute;ines et en fibres solubles.
+      </p>
+      <p>
+        Il contient notamment des vitamines du groupe B (qui jouent un r&ocirc;le important dans le m&eacute;tabolisme
+        des cellules,
+        globalement, elles participent &agrave; la transformation des nutriments en &eacute;nergie et favorisent la
+        transmission des
+        influx nerveux), de la rutine, du magn&eacute;sium, du phosphore, du zinc, du mangan&egrave;se, du cuivre et du
+        fer. Sans
+        gluten, il contient tous les acides anim&eacute;s essentiels.
+      </p>
+      <p>
+        Sur le plan nutritionnel, les farines compl&egrave;tes de sarrasin et de froment ont des profils tr&egrave;s
+        proches : 11 % de
+        prot&eacute;ines, 62&minus;68 % de glucides (constitu&eacute;s principalement d&#39;amidon) et peu de lipides (1&minus;2
+        %).
+      </p>
+      <p>
+        La farine de sarrasin est plus riche en prot&eacute;ines que les autres farines de bl&eacute;. Les caract&egrave;res
+        diff&eacute;rentiels
+        du sarrasin sont sa richesse en compos&eacute;s ph&eacute;noliques, et l&#39;absence dans sa composante prot&eacute;ique,
+        de prot&eacute;ines
+        insolubles dans l&#39;eau capable de former du gluten.
+      </p>
+    </div>
+  </div>
+  <div class="section">
+    <div class="illustration">
+      <img alt="" src="../../../../assets/img/champ.webp">
+    </div>
+    <div class="section-paragraph">
+      <h2>Interets agronomiques</h2>
+      <p>
+        La culture de sarrasin est tr&egrave;s int&eacute;ressante dans la rotation. Peu exigeante en azote et rustique,
+        cette plante
+        poss&egrave;de une arme redoutable une fois ses racines d&eacute;velopp&eacute;es : l&rsquo;all&eacute;lopathie.
+        Cela signifie que ses racines
+        secr&egrave;tent des inhibiteurs de germination qui emp&ecirc;chent les autres plantes de se d&eacute;velopper.
+      </p>
+      <p>
+        Pour les rotations ayant beaucoup de cultures d&rsquo;hiver, cette pseudo-c&eacute;r&eacute;ale de fin de
+        printemps permet de
+        couper le cycle de d&eacute;veloppement des adventices.
+      </p>
+      <cite>
+        source : revue de l&rsquo;union fran&ccedil;aise d&rsquo;agriculture biologique n&deg;71, avril-mai 2021
+      </cite>
+      <p>
+    </div>
+  </div>
+</div>

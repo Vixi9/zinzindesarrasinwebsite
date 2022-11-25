@@ -1,0 +1,40 @@
+<mat-toolbar color="primary">
+  <div class="mobile">
+    <button (click)="onToggleSidenav()" aria-label="menu" mat-icon-button>
+      <mat-icon class="grey">menu</mat-icon>
+    </button>
+    <a routerLink="/accueil">
+      <button id="title-mobile" mat-button>
+        <div class="logo">
+          <span>Zinzin</span>
+          <span>de</span>
+          <span>Sarrasin</span>
+        </div>
+      </button>
+    </a>
+  </div>
+  <div class="desktop">
+    <mat-list class="navigation-items">
+      <mat-list-item>
+        <a routerLink="/accueil">
+          <button id="title-desktop" mat-button>
+            <div class="logo">
+              <span>Zinzin</span>
+              <span>de</span>
+              <span>Sarrasin</span>
+            </div>
+          </button>
+        </a>
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-button routerLink="/produits">Produits</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-button routerLink="/a-propos">A propos</a>
+      </mat-list-item>
+      <mat-list-item>
+        <a mat-button routerLink="/contact">Contact</a>
+      </mat-list-item>
+    </mat-list>
+  </div>
+</mat-toolbar>
