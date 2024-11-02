@@ -12,7 +12,7 @@ import { FooterComponent } from './components/navigation/footer/footer.component
 import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
 import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
 import { ProduitComponent } from './components/produit/produit.component';
-import { HttpClientJsonpModule } from "@angular/common/http";
+import { provideHttpClient, withJsonpSupport } from "@angular/common/http";
 import { GoogleMapsModule } from "@angular/google-maps";
 import { MatRippleModule } from "@angular/material/core";
 import { MatLegacyButtonModule as MatButtonModule } from "@angular/material/legacy-button";
@@ -23,39 +23,33 @@ import { MatLegacyCardModule as MatCardModule } from "@angular/material/legacy-c
 import { AboutComponent } from './components/about/about.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 
-@NgModule({
-  declarations: [
-    HeaderComponent,
-    SidenavListComponent,
-    HomeComponent,
-    ContactComponent,
-    FooterComponent,
-    ProduitComponent,
-    AboutComponent,
-    LegalNoticeComponent,
-  ],
-  imports: [
-    CommonModule,
-    RouterModule,
-    MatInputModule,
-    MatFormFieldModule,
-    MatTableModule,
-    MatMenuModule,
-    HttpClientJsonpModule,
-    GoogleMapsModule,
-    MatRippleModule,
-    MatButtonModule,
-    MatListModule,
-    MatIconModule,
-    MatToolbarModule,
-    MatCardModule,
-  ],
-  exports: [
-    FooterComponent,
-    HeaderComponent,
-    SidenavListComponent,
-    HomeComponent,
-  ],
-})
+@NgModule({ declarations: [
+        HeaderComponent,
+        SidenavListComponent,
+        HomeComponent,
+        ContactComponent,
+        FooterComponent,
+        ProduitComponent,
+        AboutComponent,
+        LegalNoticeComponent,
+    ],
+    exports: [
+        FooterComponent,
+        HeaderComponent,
+        SidenavListComponent,
+        HomeComponent,
+    ], imports: [CommonModule,
+        RouterModule,
+        MatInputModule,
+        MatFormFieldModule,
+        MatTableModule,
+        MatMenuModule,
+        GoogleMapsModule,
+        MatRippleModule,
+        MatButtonModule,
+        MatListModule,
+        MatIconModule,
+        MatToolbarModule,
+        MatCardModule], providers: [provideHttpClient(withJsonpSupport())] })
 export class WebsiteModule {
 }

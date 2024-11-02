@@ -3,27 +3,20 @@ import { BrowserModule } from '@angular/platform-browser'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
-import { HttpClientJsonpModule, HttpClientModule } from '@angular/common/http'
+import { provideHttpClient, withInterceptorsFromDi, withJsonpSupport } from '@angular/common/http'
 import { WebsiteModule } from './website/website.module'
 import { MatSidenavModule } from "@angular/material/sidenav";
 
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    HttpClientJsonpModule,
-    WebsiteModule,
-    BrowserAnimationsModule,
-    MatSidenavModule
-  ],
-  bootstrap: [
-    AppComponent
-  ]
-})
+@NgModule({ declarations: [
+        AppComponent
+    ],
+    bootstrap: [
+        AppComponent
+    ], imports: [BrowserModule,
+        AppRoutingModule,
+        BrowserAnimationsModule,
+        WebsiteModule,
+        BrowserAnimationsModule,
+        MatSidenavModule], providers: [provideHttpClient(withInterceptorsFromDi(), withJsonpSupport())] })
 export class AppModule {
 }
