@@ -79,10 +79,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "zinzindesarrasin:build:production"
+              "buildTarget": "zinzindesarrasin:build:production"
             },
             "development": {
-              "browserTarget": "zinzindesarrasin:build:development"
+              "buildTarget": "zinzindesarrasin:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -90,7 +90,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "zinzindesarrasin:build"
+            "buildTarget": "zinzindesarrasin:build"
           }
         },
         "test": {
