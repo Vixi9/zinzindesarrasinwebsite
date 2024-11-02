@@ -6,20 +6,20 @@ import { HomeComponent } from './components/home/home.component';
 
 import { RouterModule } from '@angular/router';
 import { ContactComponent } from './components/contact/contact.component';
-import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
-import { MatLegacyFormFieldModule as MatFormFieldModule } from '@angular/material/legacy-form-field';
+import { MatInputModule } from '@angular/material/input';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { FooterComponent } from './components/navigation/footer/footer.component';
-import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
-import { MatLegacyMenuModule as MatMenuModule } from '@angular/material/legacy-menu';
+import { MatTableModule } from '@angular/material/table';
+import { MatMenuModule } from '@angular/material/menu';
 import { ProduitComponent } from './components/produit/produit.component';
 import { provideHttpClient, withJsonpSupport } from "@angular/common/http";
 import { GoogleMapsModule } from "@angular/google-maps";
 import { MatRippleModule } from "@angular/material/core";
-import { MatLegacyButtonModule as MatButtonModule } from "@angular/material/legacy-button";
-import { MatLegacyListModule as MatListModule } from "@angular/material/legacy-list";
+import { MatButtonModule } from "@angular/material/button";
+import { MatListModule } from "@angular/material/list";
 import { MatIconModule } from "@angular/material/icon";
 import { MatToolbarModule } from "@angular/material/toolbar";
-import { MatLegacyCardModule as MatCardModule } from "@angular/material/legacy-card";
+import { MatCardModule } from "@angular/material/card";
 import { AboutComponent } from './components/about/about.component';
 import { LegalNoticeComponent } from './components/legal-notice/legal-notice.component';
 
